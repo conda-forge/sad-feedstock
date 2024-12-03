@@ -1,0 +1,39 @@
+context:
+  version: 0.4.31
+
+package:
+  name: sad
+  version: ${{ version }}
+
+source:
+  url: https://github.com/ms-jpq/sad/archive/v${{ version }}.tar.gz
+  sha256: c717e54798e21356340271e32e43de5b05ba064ae64edf639fede27b1ed15ceb
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - ${{ compiler('rust') }}
+    - ${{ compiler('c') }}
+    - ${{ stdlib('c') }}
+    - cargo-bundle-licenses
+    - if: win
+      then: posix
+
+tests:
+  - script:
+      - sad --help
+
+about:
+  license: MIT
+  license_file:
+    - LICENSE
+    - THIRDPARTY.yml
+  summary: CLI search and replace | Space Age seD
+  homepage: https://github.com/ms-jpq/sad
+  repository: https://github.com/ms-jpq/sad
+
+extra:
+  recipe-maintainers:
+    - danielnachun
