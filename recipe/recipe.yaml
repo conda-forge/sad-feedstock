@@ -18,6 +18,8 @@ requirements:
     - ${{ compiler('c') }}
     - ${{ stdlib('c') }}
     - cargo-bundle-licenses
+    - if: win
+      then: posix
 
 tests:
   - script:
