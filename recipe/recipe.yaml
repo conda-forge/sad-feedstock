@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: 0.4.32
+  version: "0.4.33"
 
 package:
   name: sad
@@ -9,10 +9,10 @@ package:
 
 source:
   url: https://github.com/ms-jpq/sad/archive/v${{ version }}.tar.gz
-  sha256: a67902b9edb287861668ee3e39482c17b41c60e244ece62b3f8016250286294f
+  sha256: ec2b533aaa6c39b4f87d6154854ead4fc381fc9fc9b727b2fc82e6ec4f7c1d8b
 
 build:
-  number: 1
+  number: 0
 
 requirements:
   build:
